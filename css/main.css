@@ -1,0 +1,857 @@
+body {
+	background: linear-gradient(-45deg, #000000, #252525, #000000);
+	background-size: 400% 400%;
+	animation: bgAnimation 10s ease infinite;
+    overflow-x: hidden;
+}
+#mainIndex {
+	height: 100vh;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    top: 0;
+    left: 0;
+    position: fixed;
+    z-index: -10;
+}
+@keyframes bgAnimation {
+    0%, 100% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes fadeOutBg {
+    0% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+
+#introTextContainer {
+    height: 100%;
+    width: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-content: center;
+    margin-right: 50px;
+}
+.redText {
+    color: #af6969;
+}
+.blackText {
+    color: #252525;
+}
+.whiteText {
+    color: #dcdcdc;
+}
+.boldText {
+    font-weight: bolder;
+}
+
+h1 {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 75px;
+    margin-top: 0;
+}
+
+h2 {
+    font-family: Roboto, 'Gill Sans';
+    font-size: 35px;
+    margin-bottom: 20px;
+}
+
+p {
+    font-family: Roboto, 'Gill Sans';
+    margin: 0;
+    width: max-content;
+    height: max-content;
+}
+
+#reachOut {
+    text-decoration: none;
+    margin: 40px 0 0 0;
+    border: 1px rgb(220, 220, 220) solid;
+    background-color: transparent;
+    width: 100px;
+    color: rgb(220, 220, 220);
+    aspect-ratio: 3;
+    font-family: Helvetica, Arial, sans-serif;
+    border-radius: 50px;
+    animation: unhoverReachOut linear 0.1s forwards;
+}
+#reachOut:hover {
+    cursor: pointer;
+    animation: hoverReachOut linear 0.1s forwards;
+}
+#reachOut:active {
+    animation: unhoverReachOut linear 0.1s forwards;
+}
+@keyframes hoverReachOut {
+    from {  background-color: transparent;
+            color: rgb(220, 220, 220);
+            border: 1px rgb(220, 220, 220) solid;}
+
+    to {    background-color: rgb(220, 220, 220);
+            color: #202020;
+            border: none;}
+}
+@keyframes unhoverReachOut {
+    from {  background-color: rgb(220, 220, 220);
+            color: #202020;
+            border: none;}
+
+    to {    background-color: transparent;
+            color: rgb(220, 220, 220);
+            border: 1px rgb(220, 220, 220) solid;}
+}
+
+#profilePic {
+    height: 400px;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 2px rgb(0, 0, 0), 0 0 0 15px rgb(175, 105, 105);
+}
+
+.arrowsContainer {
+    width: 100%;
+    height: max-content;
+    margin-top: -150px;
+}
+.arrow {
+    width: 40px;
+    aspect-ratio: 1;
+    border-right: 4px solid;
+    border-bottom: 4px solid;
+    transform: rotate(45deg);
+    margin: -25px auto 0;
+    opacity: 0;
+}
+#arrow1 {
+    animation: arrowGlow 2s linear infinite;
+}
+#arrow2 {
+    animation: arrowGlow 2s linear infinite;
+    animation-delay: 0.3s;
+}
+#arrow3 {
+    animation: arrowGlow 2s linear infinite;
+    animation-delay: 0.6s;
+}
+@keyframes arrowGlow {
+    0%, 40%, 100% { opacity: 0; }
+    20% { opacity: 1; }
+}
+
+#mainCoversContainer {
+    position: fixed;
+    width: 100%;
+    height: 0;
+    top: 0px;
+    left: 0;
+    z-index: -1;
+}
+.mainCovers {
+    position: relative;
+    width: 150%;
+    height: 300px;
+    background-color: rgb(175, 105, 105);
+    transform: rotate(-15deg);
+    margin-top: 10px;
+    left: 110%;
+    transform-origin: -75% 0%;
+    animation: mainCovers linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes mainCovers {
+    from { 
+        translate: 0 0; 
+        background-color: rgb(175, 105, 105);
+    }
+    to {
+        translate: -2000px 535px;
+        background-color: rgb(37, 37, 37);
+    }
+}
+
+.blackBg {
+    background-color: rgb(37, 37, 37);
+}
+.redBg {
+    background-color: rgb(175, 105, 105);
+}
+.whiteBg {
+    background-color: rgb(220, 220, 220);
+}
+#aboutMeContainer {
+    width: 100%;
+    height: 100vh;
+    margin: 200vh auto 100px;
+    scale: 1;
+    opacity: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    animation: popElement linear forwards;
+    animation-timeline: view(300px 300px);
+}
+#aboutMeTextContainer {
+    width: 500px;
+    height: 500px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 15px 0 30px;
+    margin: 0 0 0 200px;
+}
+#aboutMePPic {
+    width: 400px;
+    height: 400px;
+    border-radius: 50%;
+    box-shadow: 0 0 20px 0 rgb(0, 0, 0), 0 0 0 15px rgb(175, 105, 105);
+    z-index: 5;
+}
+
+#projectsContainer {
+    width: 100%;
+    height: 700px;
+}
+#projectsTitle {
+    position: sticky;
+    top: 10px;
+    margin-top: 100px;
+    animation: popShowElement linear forwards;
+    animation-timeline: view(100px 100px);
+    opacity: 0;
+    scale: 1;
+    margin: 15px 0 50px 100px;
+}
+.projects {
+    text-decoration: none;
+    width: 95%;
+    height: 300px;
+    margin: 15px auto;
+    scale: 1;
+    opacity: 0;
+    border-radius: 150px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    border: none;
+    animation: popElement linear forwards;
+    animation-timeline: view(400px 100px);
+}
+.projects:hover .projectsText {
+    color: rgb(220, 220, 220);
+}
+.projects:hover .projectsT3 {
+    color: rgb(220, 220, 220);
+}
+.projects:hover .arrow {
+    border-color: white;
+}
+#project2:hover .projectsText {
+    color: rgb(175, 105, 105);
+}
+#project2:hover .projectsT3 {
+    color: rgb(175, 105, 105);
+}
+#project2:hover .arrow {
+    border-color: rgb(175, 105, 105);
+}
+.projects:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 7px rgb(220, 220, 220);
+}
+#project2:hover {
+    background-color: transparent;
+    box-shadow: 0 0 0 7px rgb(175, 105, 105);
+}
+.projectsT3 {
+    width: 100%;
+    margin: 0 0 0 150px;
+}
+.projectsText {
+    margin: -100px 0 0 150px;
+    font-size: 14pt;
+    line-height: 2;
+}
+@keyframes popElement {
+    0%, 100% {
+        scale: 0.8;
+        opacity: 0;
+    }
+    25%, 75% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+
+.borderWhite {
+    border-color: rgb(220, 220, 220);
+}
+.borderBlack {
+    border-color: rgb(37, 37, 37);
+}
+.borderRed {
+    border-color: rgb(175, 105, 105);
+}
+
+.projectsArrowsContainer {
+    position: absolute;
+    padding-top: 20px;
+    height: 80px;
+    width: 100px;
+    right: 125px;
+    transform: rotate(-90deg);
+    scale: 1.2;
+}
+
+#skillsContainer {
+    width: 100%;
+    height: 550px;
+    margin: 500px auto 1500px auto;
+}
+#skillsTitle {
+    position: sticky;
+    top: 10px;
+    margin-top: 100px;
+    animation: popShowElement linear forwards;
+    animation-timeline: view(100px 100px);
+    opacity: 0;
+    scale: 1;
+    margin: 15px 0 50px 100px;
+}
+@keyframes popShowElement {
+    0% {
+        scale: 0.8;
+        opacity: 0;
+    }
+    5%, 100% {
+        scale: 1;
+        opacity: 1;
+    }
+}
+.skillSlider {
+    border-radius: 50px;
+    width: 95%;
+    height: 200px;
+    opacity: 0;
+    margin-left: 2.5%;
+    margin-top: 20px;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    animation: slideSkill linear forwards;
+    animation-timeline: view(350px 150px);
+    box-shadow: 5px 10px 15px 0 rgba(0, 0, 0, 0.8);
+}
+@keyframes slideSkill {
+    0% {
+        margin-left: -200px;
+        opacity: 0;
+    }
+    10%, 90% {
+        margin-left: 2.5%;
+        opacity: 1;
+    }
+    100% {
+        margin-left: 200px;
+        opacity: 0;
+    }
+}
+.skillsT3 {
+    width: 100%;
+    margin: 0 0 0 100px;
+}
+.skillsText {
+    margin: -50px 0 0 100px;
+    line-height: 1.3;
+}
+.skillsImages {
+    position: absolute;
+    margin-left: 80%;
+    height: 120px;
+    width: 120px;
+}
+
+#reachOutSlide {
+    transform-origin: 50% -50%;
+    position: fixed;
+    width: 250vh;
+    height: 250vh;
+    top: -175vh;
+    left: 350vh;
+    background-color: rgb(175, 105, 105);
+    animation: showReachOut linear forwards;
+    animation-timeline: scroll();
+    transform: rotate(45deg);
+}
+@keyframes showReachOut {
+    0%, 78% {
+        translate: 0 0;
+        opacity: 1;
+        background-color: rgb(175, 105, 105);
+    }
+    100% {
+        translate: -1220px 1220px;
+        opacity: 1;
+        background-color: rgb(27, 27, 27);
+    }
+}
+
+#reachOutContainer {
+    width: 70%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    position: fixed;
+    top: -100%;
+    left: 15%;
+    animation: slideDown linear forwards;
+    animation-timeline: scroll();
+}
+@keyframes slideDown {
+    0%, 78% {
+        scale: 0.5;
+        top: -100%;
+        left: 100%;
+        opacity: 0;
+    }
+    100% {
+        scale: 1;
+        top: 0%;
+        left: 15%;
+        opacity: 1;
+    }
+}
+
+#reachOutT1 {
+    width: 80%;
+    height: 125px;
+    margin: 0 auto 0 100px;
+    box-shadow: 0 5px 0 0 rgb(175, 105, 105);
+}
+.reachOutTextContainer {
+    text-decoration: none;
+    width: max-content;
+    height: 150px;
+    margin: -200px auto 0;
+}
+.reachOutTextContainer:hover {
+    animation: growElement 0.1s linear forwards;
+}
+.reachOutTextContainer:hover .reachOutT2 {
+    animation: whiteElement 0.1s linear forwards;
+}
+.reachOutTextContainer:active {
+    animation: minElement 0.1 linear;
+}
+@keyframes growElement {
+    from {scale: 1;}
+    to {scale: 1.2;}
+}
+@keyframes whiteElement {
+    from {color: rgb(175, 105, 105);}
+    to {color: rgb(220, 220, 220);}
+}
+@keyframes minElement {
+    from {scale: 1.2;}
+    to {scale: 1;}
+}
+
+#downloadButton {
+    position: sticky;
+    width: 75px;
+    scale: 1;
+    aspect-ratio: 1;
+    border-radius: 50%;
+    margin-bottom: 25px;
+    margin-right: 25px;
+    top: 100%;
+    left: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    opacity: 0.7;
+    transition: opacity 0.2s, scale 0.1s;
+    background-color: rgba(175, 105, 105, 0);
+    animation: fadeInDownload linear forwards;
+    animation-timeline: view();
+    animation-range: entry;
+}
+@keyframes fadeInDownload {
+    0% {
+        background-color: rgba(175, 105, 105, 0);
+    }
+    100% {
+        background-color: rgba(175, 105, 105, 1);
+    }
+}
+#downloadButton:hover {
+    opacity: 1;
+}
+#downloadButton:active {
+    opacity: 0.7;
+    scale: 0.9;
+}
+#downloadImg {
+    width: 50%;
+    height: 50%;
+}
+
+.mainProjects {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    animation: fadeOutWebsites linear forwards;
+    animation-timeline: view();
+    animation-range: exit;
+}
+@keyframes fadeOutWebsites {
+    0% {
+        opacity: 1;
+        scale: 1;
+    }
+    50%, 100% {
+        opacity: 0;
+        scale: 0.6;
+    }
+}
+.projectsT1 {
+    width: 100%;
+    margin: 100px auto 0;
+    display: flex;
+    justify-content: center;
+}
+.projectsTextMain {
+    width: 100%;
+    margin: -300px auto -175px;
+    opacity: 0.4;
+    display: flex;
+    justify-content: center;
+}
+
+.firstProjectsContainer {
+    width: 100%;
+    height: max-content;
+    margin-top: 100vh;
+    opacity: 0;
+    scale: 0.9;
+    animation: showUpWebsite linear forwards;
+    animation-timeline: view(100px 100px);
+}
+.projectsT2 {
+    width: 100%;
+    margin: 0px 0 40px 50px;
+}
+
+#iframesContainer {
+    width: 100%;
+    height: max-content;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 40px;
+}
+#laptopTemplate {
+    height: 500px;
+    aspect-ratio: 16/9;
+    margin-left: -120px;
+    margin-right: 50px;
+    box-shadow: 0 45px 10px -40px rgba(0, 0, 0, 0.8);
+}
+
+#mobileTemplate {
+    height: 500px;
+    aspect-ratio: 9/16;
+    box-shadow: 0 65px 10px -60px rgba(0, 0, 0, 0.8);
+}
+#laptopIframe {
+    scale: 0.346;
+    height: 1200px;
+    width: 1920px;
+    position: absolute;
+    margin-left: -452px;
+    margin-top: -21px;
+    border-radius: 10px;
+}
+#mobileIframe {
+    scale: 0.75;
+    height: 638px;
+    width: 311px;
+    position: absolute;
+    margin-left: 818px;
+    margin-top: 0;
+    border-radius: 50px;
+}
+.textWeb {
+    font-family: Roboto, 'Gill Sans';
+    text-decoration: none;
+    opacity: 0.5;
+    width: max-content;
+    margin: 0 auto;
+    display: flex;
+    transition: opacity 0.2s;
+}
+.textWeb:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+.projectsContainer {
+    width: 100%;
+    height: max-content;
+    margin-top: 100px;
+    margin-bottom: 25px;
+    opacity: 0;
+    scale: 0.9;
+    animation: showUpWebsite linear forwards;
+    animation-timeline: view(100px 100px);
+}
+@keyframes showUpWebsite {
+    0%, 100% {
+        opacity: 0;
+        scale: 0.9;
+    }
+    20%, 80% { scale: 1;}
+    35%, 65% { opacity: 1; }
+}
+#veggieFrame {
+    scale: 0.7;
+    width: 995px;
+    height: 707px;
+    border: none;
+    overflow: hidden;
+    display: flex;
+    margin: -100px auto -50px;
+    box-shadow: 0 0 0 2px rgb(220, 220, 220), 0 30px 10px -10px rgba(0, 0, 0, 0.8);
+    border-radius: 10px;
+}
+
+.endContainer {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 0px;
+    width: 100%;
+    height: 1100px;
+    contain: paint;
+}
+.arrowDown {
+    height: 250px;
+    aspect-ratio: 1;
+    display: flex;
+    margin-top: -400px;
+    position: sticky;
+    top: 0px;
+}
+.textComingSoon {
+    width: 100%;
+    margin-top: 550px;
+    opacity: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.returnButton {
+    font-family: Roboto, 'Gill Sans';
+    text-decoration: none;
+    opacity: 0.5;
+
+    margin-top: -600px;
+    position: sticky;
+    top: 500px;
+    width: max-content;
+    height: max-content;
+    animation: appearDelay linear;
+    animation-timeline: view(694px 650px);
+    transition: opacity 0.2s;
+    color: rgba(220, 220, 220, 0);
+}
+@keyframes appearDelay {
+    0% { color: rgba(220, 220, 220, 0); }
+    99%{ color: rgba(220, 220, 220, 1); }
+}
+.returnButton:hover {
+    cursor: pointer;
+    opacity: 1;
+}
+
+#imgContainer {
+    display: grid;
+    margin: -50PX auto 0;
+    width: 70%;
+    padding: 50px;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.imgMonster {
+    width: 100%;
+    aspect-ratio: 0.992;
+    border-radius: 20px;
+}
+#imgMonster1 {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+#imgMonster2 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+#imgMonster3 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+#imgMonster5 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#imgMonster6 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+
+#noRigContainer {
+    width: 100%;
+    height: 600px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+}
+#traditionalGif {
+    height: 100%;
+    aspect-ratio: 0.767;
+}
+#traditionalSpriteSheet {
+    height: 100%;
+    aspect-ratio: 1.4144;
+    margin-left: 50px;
+}
+
+.rigGif {
+    height: 90%;
+    aspect-ratio: 3/4;
+    border-radius: 50px;
+    margin-top: -50px;
+    margin-left: 50px;
+    box-shadow: 0 45px 10px -40px rgba(0, 0, 0, 0.6);
+}
+.rigGif:first {
+    margin-left: 0;
+}
+
+.img3DContainer {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+    padding: 50px;
+}
+
+.HD3DImages {
+    width: 100%;
+    aspect-ratio: 16/9;
+    border-radius: 25px;
+    box-shadow: 0 25px 10px -20px rgba(0, 0, 0, 0.6);
+}
+#geometricImg1 {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+#geometricImg2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#geometricImg3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#geometricImg4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+#geometricImg5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+#organicImg1 {
+    grid-column: 2/4;
+    grid-row: 1/3;
+}
+#organicImg2 {
+    grid-column: 1/2;
+    grid-row: 1/2;
+}
+#organicImg3 {
+    grid-column: 1/2;
+    grid-row: 2/3;
+}
+#organicImg4 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+#organicImg5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+#ownWorksContainer {
+    display: grid;
+    gap: 25px;
+    grid-template-columns: repeat(4, 1fr);
+}
+.ownWorksImgs {
+    box-shadow: 0 25px 10px -20px rgba(0, 0, 0, 0.6);
+}
+.littleCars {
+    background-color: #000000;
+}
+#littleCarImg1 {
+    grid-column: 1/3;
+    grid-row: 1/3;
+}
+#littleCarImg2 {
+    grid-column: 3/4;
+    grid-row: 1/2;
+}
+#littleCarImg3 {
+    grid-column: 4/5;
+    grid-row: 1/2;
+}
+#littleCarImg4 {
+    grid-column: 3/4;
+    grid-row: 2/3;
+}
+#littleCarImg5 {
+    grid-column: 4/5;
+    grid-row: 2/3;
+}
+
+video {
+    width: 55%;
+    height: auto;
+    display: flex;
+    margin: 0 auto;
+}
+
+.gameDescription {
+    font-family: Roboto, 'Gill Sans';
+    opacity: 0.6;
+    margin: 40px 0 20px 50px;
+    width: max-content;
+    height: max-content;
+    font-size: 11pt;
+    line-height: 1.5;
+}
