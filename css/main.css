@@ -839,9 +839,10 @@ p {
     grid-row: 2/3;
 }
 
-video {
-    width: 55%;
-    height: auto;
+.video {
+    border: none;
+    height: 480px;
+    width: 854px;
     display: flex;
     margin: 0 auto;
 }
