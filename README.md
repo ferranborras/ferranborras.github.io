@@ -6,4 +6,4 @@ If you are interested in working with me, do not hesitate to contact me:
 
 Phone number: +34 634 67 79 13
 
-Email: ferranbb2003@gmail.com
+Email: ferranborrasb@gmail.com
