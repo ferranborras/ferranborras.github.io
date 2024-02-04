@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferran Borrás | Portfolio</title>
+    <link rel="icon" href="imgs/favicon.ico" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
+</head>
+<body>
+    <main id="mainIndex">
+        <div id="introTextContainer">
+            <h1 id="homeTitle" class="redText">Full-stack<br>
+                Developer.</h1>
+
+            <h2 class="whiteText">Hello, I'm Ferran Borrás</h2>
+            <p class="whiteText">
+                I love starting new projects,
+                experimenting, shaping them<br>
+                and creating new sensations
+                and emotions among people.
+            </p>
+            <button id="reachOut" onclick="ScrollToBottom()">Reach out</button>
+        </div>
+        <img id="profilePic" src="imgs/ProfilePic2.png" alt="Profile pic">
+        <div id="arrowsHome" class="arrowsContainer">
+            <div class="arrow borderWhite" id="arrow1"></div>
+            <div class="arrow borderWhite" id="arrow2"></div>
+            <div class="arrow borderWhite" id="arrow3"></div>
+        </div>
+    </main>
+    <div id="mainCoversContainer">
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+    </div>
+
+    <div id="aboutMeContainer">
+        <img id="aboutMePPic" src="imgs/ProfilePic.png" alt="AboutMeProfilePic">
+        <div id="aboutMeTextContainer">
+            <h1 class="whiteText">About me.</h1>
+            <p id="aboutMeText1" class="whiteText boldText aboutMeText">
+                I am a university degree student of Video Game Design and Development. 
+                During my education I have had the opportunity to work in a team, to 
+                master multiple disciplines in the sector and to work on my own independent projects.
+            </p>
+            <p id="aboutMeText2" class="whiteText boldText aboutMeText">
+                I like to translate my skills into new projects and visualize my progress. 
+                I never stop creating and experimenting since I love learning new knowledge, 
+                which keeps me in continuous training.
+            </p>
+            <p id="aboutMeText3" class="whiteText boldText aboutMeText">
+                My closest goals are to finish graduating and embark on an ambitious project, 
+                whether it is my own project or a team effort. I love seeing the results of my 
+                creations and how people can enjoy them.
+            </p>
+            <div class="dotsContainer" style="display: none;">
+                <button id="dotButton1" class="dotButton disabled" onclick="DisplayAboutMe1()" disabled></button>
+                <button id="dotButton2" class="dotButton" onclick="DisplayAboutMe2()" enabled></button>
+                <button id="dotButton3" class="dotButton" onclick="DisplayAboutMe3()" enabled></button>
+            </div>
+        </div>
+    </div>
+
+    <div id="projectsContainer">
+        <h1 id="projectsTitle" class="whiteText">My projects.</h1>
+        <a id="project1" class="projects whiteBg" href="websitesProjects.html">
+            <h2 class="blackText boldText projectsT3">Websites</h2>
+            <p class="blackText projectsText boldText">
+                This website has been designed and programmed entirely by me.
+                <br>
+                I also have some projects with great Javascript content like the following one.
+            </p>
+            <div class="projectsArrowsContainer">
+                <div class="arrowProjects borderBlack" id="arrow1"></div>
+                <div class="arrowProjects borderBlack" id="arrow2"></div>
+                <div class="arrowProjects borderBlack" id="arrow3"></div>
+            </div>
+        </a>
+        <a id="project2" class="projects redBg" href="artProjects.html">
+            <h2 class="whiteText boldText projectsT3">Arts and Animations</h2>
+            <p class="whiteText projectsText boldText">
+                During my education I have practiced different techniques and styles of painting, drawing and animation.
+            </p>
+            <div class="projectsArrowsContainer">
+                <div class="arrowProjects borderWhite" id="arrow1"></div>
+                <div class="arrowProjects borderWhite" id="arrow2"></div>
+                <div class="arrowProjects borderWhite" id="arrow3"></div>
+            </div>
+        </a>
+        <a id="project3" class="projects whiteBg" href="videogameProjects.html">
+            <h2 class="blackText boldText projectsT3">Videogames</h2>
+            <p class="blackText projectsText boldText">
+                I have also worked on different video game development projects both as a team and on my own.
+                <br>
+                This has allowed me to really experience what the work and organization is like during the development stage.
+            </p>
+            <div class="projectsArrowsContainer">
+                <div class="arrowProjects borderBlack" id="arrow1"></div>
+                <div class="arrowProjects borderBlack" id="arrow2"></div>
+                <div class="arrowProjects borderBlack" id="arrow3"></div>
+            </div>
+        </a>
+    </div>
+
+    <div id="skillsContainer">
+        <h1 id="skillsTitle" class="whiteText">My skills.</h1>
+        <div class="skillSlider redBg">
+            <h2 class="blackText boldText skillsT3">Languages</h2>
+            <p id="languagesSkillsText" class="whiteText boldText skillsText">
+                I can speak English fluently, I have level B2 in the language.
+                <br>
+                I speak Spanish natively since I live in Spain.
+                <br>
+                I also speak Catalan since it is my mother tongue.
+            </p>
+            <img class="skillsImages" src="imgs/language-01.png" alt="LanguagesIcon">
+        </div>
+        <div class="skillSlider blackBg">
+            <h2 class="redText boldText skillsT3">Coding languages</h2>
+            <p id="codingLanguagesSkillsText" class="whiteText boldText skillsText">
+                I am fluent in C, C# and C++ languages.
+                <br>
+                I also know Html5, CSS, Javascript and GLSL.
+                <br>
+                I can program in Python.
+                <br>
+                And I know about MySQL and ARM Assembly.
+            </p>
+            <img class="skillsImages" src="imgs/coding-01.png" alt="CodingIcon">
+        </div>
+        <div class="skillSlider whiteBg">
+            <h2 class="redText boldText skillsT3">Other skills</h2>
+            <p id="otherSkillsText" class="blackText boldText skillsText">
+                I have knowledge of data algorithms.
+                <br>
+                I am proficient in 2D and 3D design programs like Photoshop, Illustrator, Krita, Inkscape, Blender and 3dsMax.
+                <br>
+                I also have knowledge of computer and mobile video game development in Unity.
+                <br>
+                I have experience working on demand and developing the product with an organized team.
+            </p>
+            <img class="skillsImages" src="imgs/star-01.png" alt="OtherIcon">
+        </div>
+    </div>
+
+    <div id="reachOutSlide"></div>
+    <div id="reachOutContainer">
+        <h1 id="reachOutT1" class="whiteText">Reach out.</h1>
+        <a class="reachOutTextContainer" href="https://wa.me/634677913" target="blank_">
+            <h2 class="redText reachOutT2">Phone number</h2>
+            <p class="whiteText boldText reachOutText">
+                +34 634 67 79 13
+            </p>
+        </a>
+        <a class="reachOutTextContainer" href="mailto:ferranborrasb@gmail.com?" target="blank_">
+            <h2 class="redText reachOutT2">Email</h2>
+            <p class="whiteText boldText reachOutText">
+                ferranborrasb@gmail.com
+            </p>
+        </a>
+        <a class="reachOutTextContainer" href="https://maps.app.goo.gl/8JzigBeQ4rVjX4TJ7" target="blank_">
+            <h2 class="redText reachOutT2">Address</h2>
+            <p class="whiteText boldText reachOutText">
+                Valencia, Spain.
+            </p>
+        </a>
+    </div>
+
+    <a id="downloadButton" href="imgs/cardDownload.png" download="Ferran-Borras-contact-card.png">
+        <img id="downloadImg" src="imgs/download.png" alt="">
+    </a>
+
+    <script>
+        window.onload = UpdateContent();
+        function UpdateContent() {
+            if (window.screen.width <= 768) {
+                document.getElementById("homeTitle").innerText = "Full-stack Dev.";
+                Array.from(document.getElementsByClassName("dotsContainer")).forEach((item, index) => item.style.display = "flex");
+                document.getElementById("languagesSkillsText").innerText = "Fluent English, B2 level.\nNative Spanish.\nNative Catalan.";
+                document.getElementById("codingLanguagesSkillsText").innerText = "C, C# and C++.\nHtml5, CSS, Javascript and GLSL.\nPython.\nMySQL and ARM Assembly.";
+                document.getElementById("otherSkillsText").innerText = "Knowledge of data algorithms.\nPhotoshop, Illustrator, Krita, Inkscape, Blender and 3dsMax.\nVideo game development in Unity.\nExperience developing the product with an organized team.";
+                if (window.screen.width <= 320)
+                    document.getElementById("otherSkillsText").innerText = "Knowledge of data algorithms.\nPhotoshop, Illustrator, Blender and so more.\nVideo game development in Unity.\nExperience working in a team.";
+            }
+        }
+
+        function DisplayAboutMe1() {
+            document.getElementById("aboutMeText1").style.display = "block";
+            document.getElementById("aboutMeText2").style.display = "none";
+            document.getElementById("aboutMeText3").style.display = "none";
+
+            document.getElementById("dotButton1").disabled = true;
+            document.getElementById("dotButton1").classList.add("disabled");
+
+            document.getElementById("dotButton2").disabled = false;
+            document.getElementById("dotButton3").disabled = false;
+            document.getElementById("dotButton2").classList.remove("disabled");
+            document.getElementById("dotButton3").classList.remove("disabled");
+
+        }
+        function DisplayAboutMe2() {
+            document.getElementById("aboutMeText1").style.display = "none";
+            document.getElementById("aboutMeText2").style.display = "block";
+            document.getElementById("aboutMeText3").style.display = "none";
+
+            document.getElementById("dotButton2").disabled = true;
+            document.getElementById("dotButton2").classList.add("disabled");
+
+            document.getElementById("dotButton1").disabled = false;
+            document.getElementById("dotButton3").disabled = false;
+            document.getElementById("dotButton1").classList.remove("disabled");
+            document.getElementById("dotButton3").classList.remove("disabled");
+
+        }
+        function DisplayAboutMe3() {
+            document.getElementById("aboutMeText1").style.display = "none";
+            document.getElementById("aboutMeText2").style.display = "none";
+            document.getElementById("aboutMeText3").style.display = "block";
+
+            document.getElementById("dotButton3").disabled = true;
+            document.getElementById("dotButton3").classList.add("disabled");
+
+            document.getElementById("dotButton2").disabled = false;
+            document.getElementById("dotButton1").disabled = false;
+            document.getElementById("dotButton2").classList.remove("disabled");
+            document.getElementById("dotButton1").classList.remove("disabled");
+
+        }
+
+        function ScrollToBottom() {
+            if (window.screen.width <= 426) {
+                window.scroll({
+                    top: 3255,
+                });
+                window.scroll({
+                    top: 3600,
+                    behavior: "smooth",
+                });
+            }
+            else if (window.screen.width <= 1024) {
+                window.scroll({
+                    top: 4020,
+                });
+                window.scroll({
+                    top: 4460,
+                    behavior: "smooth",
+                });
+            }
+            else if (window.screen.width <= 1440) {
+                window.scroll({
+                    top: 4400,
+                });
+                window.scroll({
+                    top: 5400,
+                    behavior: "smooth",
+                });
+            }
+            else if (window.screen.width <= 1920) {
+                window.scroll({
+                    top: 4000,
+                });
+                window.scroll({
+                    top: 5000,
+                    behavior: "smooth",
+                });
+            }
+            else {
+                window.scroll({
+                    top: 7250,
+                });
+                window.scroll({
+                    top: 8550,
+                    behavior: "smooth",
+                });
+            }
+        };
+    </script>
+</body>
+</html>
