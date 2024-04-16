@@ -129,7 +129,7 @@
     <script>
         window.onload = UpdateContent();
         function UpdateContent() {
-            if (window.screen.width <= 768) {
+            if (window.screen.width/window.screen.height <= 4/3) {
                 document.getElementById("artSubtitle").innerText = "Some works I have done during my education.";
                 Array.from(document.getElementsByClassName("dotsContainer")).forEach((item, index) => item.style.display = "flex");
             }

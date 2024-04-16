@@ -10,13 +10,14 @@
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
 <body>
+    <div id="initialLogo"></div>
     <main id="mainIndex">
         <div id="introTextContainer">
             <h1 id="homeTitle" class="redText">Full-stack<br>
                 Developer.</h1>
 
-            <h2 class="whiteText">Hello, I'm Ferran Borrás</h2>
-            <p class="whiteText">
+            <h2 id="homeSubtitle" class="whiteText">Hello, I'm Ferran Borrás</h2>
+            <p id="homeText" class="whiteText">
                 I love starting new projects,
                 experimenting, shaping them<br>
                 and creating new sensations
@@ -67,20 +68,22 @@
 
     <div id="projectsContainer">
         <h1 id="projectsTitle" class="whiteText">My projects.</h1>
-        <a id="project1" class="projects whiteBg" href="websitesProjects.html">
-            <h2 class="blackText boldText projectsT3">Websites</h2>
-            <p class="blackText projectsText boldText">
+        <a id="project1" class="projects redBg" href="websitesProjects.html">
+            <div id="projectsImgWebsites" class="projectsImg"></div>
+            <h2 class="whiteText boldText projectsT3">Websites</h2>
+            <p class="whiteText projectsText boldText">
                 This website has been designed and programmed entirely by me.
                 <br>
                 I also have some projects with great Javascript content like the following one.
             </p>
             <div class="projectsArrowsContainer">
-                <div class="arrowProjects borderBlack" id="arrow1"></div>
-                <div class="arrowProjects borderBlack" id="arrow2"></div>
-                <div class="arrowProjects borderBlack" id="arrow3"></div>
+                <div class="arrowProjects whiteText" id="arrow1"></div>
+                <div class="arrowProjects whiteText" id="arrow2"></div>
+                <div class="arrowProjects whiteText" id="arrow3"></div>
             </div>
         </a>
-        <a id="project2" class="projects redBg" href="artProjects.html">
+        <a id="project2" class="projects blackBg" href="artProjects.html">
+            <div id="projectsImgArts" class="projectsImg"></div>
             <h2 class="whiteText boldText projectsT3">Arts and Animations</h2>
             <p class="whiteText projectsText boldText">
                 During my education I have practiced different techniques and styles of painting, drawing and animation.
@@ -92,16 +95,17 @@
             </div>
         </a>
         <a id="project3" class="projects whiteBg" href="videogameProjects.html">
-            <h2 class="blackText boldText projectsT3">Videogames</h2>
+            <div id="projectsImgVideogames" class="projectsImg"></div>
+            <h2 class="redText boldText projectsT3">Videogames</h2>
             <p class="blackText projectsText boldText">
                 I have also worked on different video game development projects both as a team and on my own.
                 <br>
                 This has allowed me to really experience what the work and organization is like during the development stage.
             </p>
             <div class="projectsArrowsContainer">
-                <div class="arrowProjects borderBlack" id="arrow1"></div>
-                <div class="arrowProjects borderBlack" id="arrow2"></div>
-                <div class="arrowProjects borderBlack" id="arrow3"></div>
+                <div class="arrowProjects borderRed" id="arrow1"></div>
+                <div class="arrowProjects borderRed" id="arrow2"></div>
+                <div class="arrowProjects borderRed" id="arrow3"></div>
             </div>
         </a>
     </div>
@@ -147,38 +151,37 @@
         </div>
     </div>
 
-    <div id="reachOutSlide"></div>
     <div id="reachOutContainer">
-        <h1 id="reachOutT1" class="whiteText">Reach out.</h1>
-        <a class="reachOutTextContainer" href="https://wa.me/634677913" target="blank_">
-            <h2 class="redText reachOutT2">Phone number</h2>
-            <p class="whiteText boldText reachOutText">
-                +34 634 67 79 13
-            </p>
-        </a>
-        <a class="reachOutTextContainer" href="mailto:ferranborrasb@gmail.com?" target="blank_">
-            <h2 class="redText reachOutT2">Email</h2>
-            <p class="whiteText boldText reachOutText">
-                ferranborrasb@gmail.com
-            </p>
-        </a>
-        <a class="reachOutTextContainer" href="https://maps.app.goo.gl/8JzigBeQ4rVjX4TJ7" target="blank_">
-            <h2 class="redText reachOutT2">Address</h2>
-            <p class="whiteText boldText reachOutText">
-                Valencia, Spain.
-            </p>
+        <div id="reachOutSlide">
+            <h1 id="reachOutT1" class="whiteText">Reach out.</h1>
+            <a class="reachOutTextContainer" href="https://wa.me/634677913" target="blank_">
+                <h2 class="redText reachOutT2">Phone number</h2>
+                <p class="whiteText boldText reachOutText">
+                    +34 634 67 79 13
+                </p>
+            </a>
+            <a class="reachOutTextContainer" href="mailto:ferranborrasb@gmail.com?" target="blank_">
+                <h2 class="redText reachOutT2">Email</h2>
+                <p class="whiteText boldText reachOutText">
+                    ferranborrasb@gmail.com
+                </p>
+            </a>
+            <a class="reachOutTextContainer" href="https://maps.app.goo.gl/8JzigBeQ4rVjX4TJ7" target="blank_">
+                <h2 class="redText reachOutT2">Address</h2>
+                <p class="whiteText boldText reachOutText">
+                    Valencia, Spain.
+                </p>
+            </a>
+        </div>
+        <a id="downloadButton" href="imgs/cardDownload.png" download="Ferran-Borras-contact-card.png">
+            <img id="downloadImg" src="imgs/download.png" alt="">
         </a>
     </div>
-
-    <a id="downloadButton" href="imgs/cardDownload.png" download="Ferran-Borras-contact-card.png">
-        <img id="downloadImg" src="imgs/download.png" alt="">
-    </a>
 
     <script>
         window.onload = UpdateContent();
         function UpdateContent() {
-            if (window.screen.width <= 768) {
-                document.getElementById("homeTitle").innerText = "Full-stack Dev.";
+            if (window.screen.width/window.screen.height <= 4/3) {
                 Array.from(document.getElementsByClassName("dotsContainer")).forEach((item, index) => item.style.display = "flex");
                 document.getElementById("languagesSkillsText").innerText = "Fluent English, B2 level.\nNative Spanish.\nNative Catalan.";
                 document.getElementById("codingLanguagesSkillsText").innerText = "C, C# and C++.\nHtml5, CSS, Javascript and GLSL.\nPython.\nMySQL and ARM Assembly.";
@@ -232,48 +235,22 @@
         }
 
         function ScrollToBottom() {
-            if (window.screen.width <= 426) {
+            console.log("Clicked");
+            if (window.screen.width/window.screen.height > 4/3) {
                 window.scroll({
-                    top: 3255,
+                    top: 3510,
                 });
                 window.scroll({
-                    top: 3600,
-                    behavior: "smooth",
-                });
-            }
-            else if (window.screen.width <= 1024) {
-                window.scroll({
-                    top: 4020,
-                });
-                window.scroll({
-                    top: 4460,
-                    behavior: "smooth",
-                });
-            }
-            else if (window.screen.width <= 1440) {
-                window.scroll({
-                    top: 4400,
-                });
-                window.scroll({
-                    top: 5400,
-                    behavior: "smooth",
-                });
-            }
-            else if (window.screen.width <= 1920) {
-                window.scroll({
-                    top: 4000,
-                });
-                window.scroll({
-                    top: 5000,
+                    top: document.body.parentNode.offsetHeight,
                     behavior: "smooth",
                 });
             }
             else {
                 window.scroll({
-                    top: 7250,
+                    top: 3350,
                 });
                 window.scroll({
-                    top: 8550,
+                    top: document.body.parentNode.offsetHeight,
                     behavior: "smooth",
                 });
             }
