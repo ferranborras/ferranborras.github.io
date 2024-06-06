@@ -231,7 +231,7 @@ button:active {
     height: max-content;
     margin-top: 0px;
     margin-bottom: 12%;
-    text-align: justify;
+    text-align: center;
     font-weight: bolder;
     color: rgba(100, 100, 100, 1);
 }
