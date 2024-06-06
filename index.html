@@ -9,21 +9,24 @@
     <link rel="stylesheet" href="css/main.css">
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100&display=swap" rel="stylesheet">
 </head>
-<body>
-    <div id="initialLogo"></div>
-    <main id="mainIndex">
+<body id="indexBody">
+    <div id="initialLogo"><img id="logo" src="imgs/Logo.png" alt="Logo"></div>
+    <div id="confettiContainer"></div>
+    <main id="mainIndex" class="">
         <div id="introTextContainer">
-            <h1 id="homeTitle" class="redText">Full-stack<br>
-                Developer.</h1>
-
-            <h2 id="homeSubtitle" class="whiteText">Hello, I'm Ferran Borrás</h2>
+            <h1 id="homeTitle" class="redText">
+                Full-stack<br>
+                Developer.
+            </h1>
+            <h2 id="homeSubtitle" class="whiteText">
+                Hello, I'm Ferran Borrás
+            </h2>
             <p id="homeText" class="whiteText">
                 I love starting new projects,
-                experimenting, shaping them<br>
+                experimenting, shaping them
                 and creating new sensations
                 and emotions among people.
             </p>
-            <button id="reachOut" onclick="ScrollToBottom()">Reach out</button>
         </div>
         <img id="profilePic" src="imgs/ProfilePic2.png" alt="Profile pic">
         <div id="arrowsHome" class="arrowsContainer">
@@ -32,15 +35,51 @@
             <div class="arrow borderWhite" id="arrow3"></div>
         </div>
     </main>
-    <div id="mainCoversContainer">
+    <button id="navDisplayer" class="navDisplayer" onclick="DisplayNav()" enabled></button>
+    <nav id="navContainer" class="navContainer">
+        <button id="scrollTop" class="scrollTop" onclick="ScrollToTop()"></button>
+        <div class="betweenMenu"></div>
+        <button id="aboutMeMenu" class="menuButton" onclick="ScrollToSection(0)">About me</button>
+        <div class="betweenMenu"></div>
+        <button id="myProjectsMenu" class="menuButton" onclick="ScrollToSection(1)">My projects</button>
+        <div class="betweenMenu"></div>
+        <button id="mySkillsMenu" class="menuButton" onclick="ScrollToSection(2)">My skills</button>
+        <div class="betweenMenu"></div>
+        <button id="reachOutMenu" class="menuButton" onclick="ScrollToSection(100)">Reach out</button>
+    </nav>
+
+    <div class="mainCoversContainer">
+        <div id="detector" class="detector"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
+        <div class="mainCovers"></div>
         <div class="mainCovers"></div>
         <div class="mainCovers"></div>
         <div class="mainCovers"></div>
         <div class="mainCovers"></div>
     </div>
 
-    <div id="aboutMeContainer">
-        <img id="aboutMePPic" src="imgs/ProfilePic.png" alt="AboutMeProfilePic">
+    <div id="aboutMeContainer" class="aboutMeContainer">
+        <div id="aboutMeDetector" class="sectionDetector"></div>
+        <p id="keepScrolling">Keep scrolling</p>
+        <div id="aboutMeWheelContainer" onclick="SpinWheel()" onmouseover="HoverWheel()" onmouseout="UnhoverWheel()">
+            <div id="wheel">
+                <p class="wheelText whiteText">I don't like this!</p>
+                <p class="wheelText blackText">You want me!</p>
+                <p class="wheelText whiteText">How awful!</p>
+                <p class="wheelText whiteText">It's my job!</p>
+                <p class="wheelText blackText">It's too bad.</p>
+                <p class="wheelText whiteText">Let's code!</p>
+            </div>
+            <div id="aboutMePPic">
+                <img id="PPicImg" src="imgs/ProfilePic.png" alt="Profile pic">
+            </div>
+        </div>
         <div id="aboutMeTextContainer">
             <h1 class="whiteText">About me.</h1>
             <p id="aboutMeText1" class="whiteText boldText aboutMeText">
@@ -58,7 +97,7 @@
                 whether it is my own project or a team effort. I love seeing the results of my 
                 creations and how people can enjoy them.
             </p>
-            <div class="dotsContainer" style="display: none;">
+            <div id="aboutMeDots" class="dotsContainer" style="display: none;">
                 <button id="dotButton1" class="dotButton disabled" onclick="DisplayAboutMe1()" disabled></button>
                 <button id="dotButton2" class="dotButton" onclick="DisplayAboutMe2()" enabled></button>
                 <button id="dotButton3" class="dotButton" onclick="DisplayAboutMe3()" enabled></button>
@@ -66,15 +105,14 @@
         </div>
     </div>
 
-    <div id="projectsContainer">
+    <div id="projectsContainer" class="">
+        <div id="projectsDetector" class="sectionDetector"></div>
         <h1 id="projectsTitle" class="whiteText">My projects.</h1>
-        <a id="project1" class="projects redBg" href="websitesProjects.html">
+        <a id="project1" class="projects" href="websitesProjects.html">
             <div id="projectsImgWebsites" class="projectsImg"></div>
             <h2 class="whiteText boldText projectsT3">Websites</h2>
             <p class="whiteText projectsText boldText">
-                This website has been designed and programmed entirely by me.
-                <br>
-                I also have some projects with great Javascript content like the following one.
+                This website and others designed and programmed entirely, or part of them, by me.
             </p>
             <div class="projectsArrowsContainer">
                 <div class="arrowProjects whiteText" id="arrow1"></div>
@@ -82,112 +120,94 @@
                 <div class="arrowProjects whiteText" id="arrow3"></div>
             </div>
         </a>
-        <a id="project2" class="projects blackBg" href="artProjects.html">
+        <a id="project2" class="projects" href="artProjects.html">
             <div id="projectsImgArts" class="projectsImg"></div>
             <h2 class="whiteText boldText projectsT3">Arts and Animations</h2>
             <p class="whiteText projectsText boldText">
-                During my education I have practiced different techniques and styles of painting, drawing and animation.
+                Practices on painting, drawing and animation that I have done during my education.
             </p>
             <div class="projectsArrowsContainer">
-                <div class="arrowProjects borderWhite" id="arrow1"></div>
-                <div class="arrowProjects borderWhite" id="arrow2"></div>
-                <div class="arrowProjects borderWhite" id="arrow3"></div>
+                <div class="arrowProjects whiteText" id="arrow1"></div>
+                <div class="arrowProjects whiteText" id="arrow2"></div>
+                <div class="arrowProjects whiteText" id="arrow3"></div>
             </div>
         </a>
-        <a id="project3" class="projects whiteBg" href="videogameProjects.html">
+        <a id="project3" class="projects" href="videogameProjects.html">
             <div id="projectsImgVideogames" class="projectsImg"></div>
-            <h2 class="redText boldText projectsT3">Videogames</h2>
-            <p class="blackText projectsText boldText">
+            <h2 class="whiteText boldText projectsT3">Videogames</h2>
+            <p class="whiteText projectsText boldText">
                 I have also worked on different video game development projects both as a team and on my own.
-                <br>
-                This has allowed me to really experience what the work and organization is like during the development stage.
             </p>
             <div class="projectsArrowsContainer">
-                <div class="arrowProjects borderRed" id="arrow1"></div>
-                <div class="arrowProjects borderRed" id="arrow2"></div>
-                <div class="arrowProjects borderRed" id="arrow3"></div>
+                <div class="arrowProjects whiteText" id="arrow1"></div>
+                <div class="arrowProjects whiteText" id="arrow2"></div>
+                <div class="arrowProjects whiteText" id="arrow3"></div>
             </div>
         </a>
     </div>
 
     <div id="skillsContainer">
+        <div id="skillsDetector" class="sectionDetector"></div>
         <h1 id="skillsTitle" class="whiteText">My skills.</h1>
-        <div class="skillSlider redBg">
-            <h2 class="blackText boldText skillsT3">Languages</h2>
-            <p id="languagesSkillsText" class="whiteText boldText skillsText">
-                I can speak English fluently, I have level B2 in the language.
-                <br>
-                I speak Spanish natively since I live in Spain.
-                <br>
-                I also speak Catalan since it is my mother tongue.
-            </p>
-            <img class="skillsImages" src="imgs/language-01.png" alt="LanguagesIcon">
+        <div id="languagesSkills" class="skills">
+            <h2 class="skillsT3">Languages</h2>
+            <ul id="languagesSkillsText" class="skillsText">
+                <li>B2 level English.</li>
+                <li>Native Spanish.</li>
+                <li>Native Catalan.</li>
+            </ul>
         </div>
-        <div class="skillSlider blackBg">
-            <h2 class="redText boldText skillsT3">Coding languages</h2>
-            <p id="codingLanguagesSkillsText" class="whiteText boldText skillsText">
-                I am fluent in C, C# and C++ languages.
-                <br>
-                I also know Html5, CSS, Javascript and GLSL.
-                <br>
-                I can program in Python.
-                <br>
-                And I know about MySQL and ARM Assembly.
-            </p>
-            <img class="skillsImages" src="imgs/coding-01.png" alt="CodingIcon">
+        <div id="codingSkills" class="skills">
+            <h2 class="skillsT3">Coding languages</h2>
+            <ul id="codingLanguagesSkillsText" class="skillsText">
+                <li>C, C# and C++.</li>
+                <li>Html5, CSS, JavaScript and GLSL.</li>
+                <li>Python.</li>
+                <li>MySQL and ARM Assembly.</li>
+            </ul>
         </div>
-        <div class="skillSlider whiteBg">
-            <h2 class="redText boldText skillsT3">Other skills</h2>
-            <p id="otherSkillsText" class="blackText boldText skillsText">
-                I have knowledge of data algorithms.
-                <br>
-                I am proficient in 2D and 3D design programs like Photoshop, Illustrator, Krita, Inkscape, Blender and 3dsMax.
-                <br>
-                I also have knowledge of computer and mobile video game development in Unity.
-                <br>
-                I have experience working on demand and developing the product with an organized team.
-            </p>
-            <img class="skillsImages" src="imgs/star-01.png" alt="OtherIcon">
+        <div id="otherSkills" class="skills">
+            <h2 class="skillsT3">Other skills</h2>
+            <ul id="otherSkillsText" class="skillsText">
+                <li>Data algorithms.</li>
+                <li>2D and 3D design.</li>
+                <li>Videogames development.</li>
+                <li>Working with a team.</li>
+            </ul>
         </div>
     </div>
 
     <div id="reachOutContainer">
-        <div id="reachOutSlide">
-            <h1 id="reachOutT1" class="whiteText">Reach out.</h1>
-            <a class="reachOutTextContainer" href="https://wa.me/634677913" target="blank_">
-                <h2 class="redText reachOutT2">Phone number</h2>
-                <p class="whiteText boldText reachOutText">
-                    +34 634 67 79 13
-                </p>
-            </a>
-            <a class="reachOutTextContainer" href="mailto:ferranborrasb@gmail.com?" target="blank_">
-                <h2 class="redText reachOutT2">Email</h2>
-                <p class="whiteText boldText reachOutText">
-                    ferranborrasb@gmail.com
-                </p>
-            </a>
-            <a class="reachOutTextContainer" href="https://maps.app.goo.gl/8JzigBeQ4rVjX4TJ7" target="blank_">
-                <h2 class="redText reachOutT2">Address</h2>
-                <p class="whiteText boldText reachOutText">
-                    Valencia, Spain.
-                </p>
-            </a>
-        </div>
-        <a id="downloadButton" href="imgs/cardDownload.png" download="Ferran-Borras-contact-card.png">
-            <img id="downloadImg" src="imgs/download.png" alt="">
+        <div id="reachOutDetector" class="sectionDetector"></div>
+        <h1 id="reachOutT1" class="whiteText">Reach out.</h1>
+        <a class="reachOutTextContainer" href="https://wa.me/634677913" target="blank_">
+            <h2 class="redText reachOutT2">Phone number</h2>
+            <p class="whiteText boldText reachOutText">
+                +34 634 677 913
+            </p>
         </a>
+        <a class="reachOutTextContainer" href="mailto:ferranborrasb@gmail.com?" target="blank_">
+            <h2 class="redText reachOutT2">Email</h2>
+            <p class="whiteText boldText reachOutText">
+                ferranborrasb@gmail.com
+            </p>
+        </a>
+        <a class="reachOutTextContainer" href="https://maps.app.goo.gl/8JzigBeQ4rVjX4TJ7" target="blank_">
+            <h2 class="redText reachOutT2">Address</h2>
+            <p class="whiteText boldText reachOutText">
+                Valencia, Spain.
+            </p>
+        </a>
+        
     </div>
-
+    <a id="downloadButton" class="downloadButton" href="imgs/cardDownload.png" onclick="DownloadCV(this)" download="Ferran-Borras-contact-card.png"></a>
+    
+    <script type="text/javascript" src="js/index.js"></script>
     <script>
         window.onload = UpdateContent();
         function UpdateContent() {
             if (window.screen.width/window.screen.height <= 4/3) {
                 Array.from(document.getElementsByClassName("dotsContainer")).forEach((item, index) => item.style.display = "flex");
-                document.getElementById("languagesSkillsText").innerText = "Fluent English, B2 level.\nNative Spanish.\nNative Catalan.";
-                document.getElementById("codingLanguagesSkillsText").innerText = "C, C# and C++.\nHtml5, CSS, Javascript and GLSL.\nPython.\nMySQL and ARM Assembly.";
-                document.getElementById("otherSkillsText").innerText = "Knowledge of data algorithms.\nPhotoshop, Illustrator, Krita, Inkscape, Blender and 3dsMax.\nVideo game development in Unity.\nExperience developing the product with an organized team.";
-                if (window.screen.width <= 320)
-                    document.getElementById("otherSkillsText").innerText = "Knowledge of data algorithms.\nPhotoshop, Illustrator, Blender and so more.\nVideo game development in Unity.\nExperience working in a team.";
             }
         }
 
@@ -234,27 +254,34 @@
 
         }
 
-        function ScrollToBottom() {
-            console.log("Clicked");
-            if (window.screen.width/window.screen.height > 4/3) {
+        function ScrollToTop() {
+            let keepScrolling = document.getElementById("keepScrolling");
+            let aboutMeContainer = document.getElementById("aboutMeContainer");
+            aboutMeContainer.classList.add("aboutMeContainerHide");
+            window.scroll({
+                top: 0,
+            });
+            window.scroll({
+                top: 0,
+                behavior: "smooth",
+            });
+        };
+
+        function ScrollToSection(dist) {
+            if (window.screen.width/window.screen.height <= 4/3) {
                 window.scroll({
-                    top: 3510,
-                });
-                window.scroll({
-                    top: document.body.parentNode.offsetHeight,
+                    top: (15+dist*21.3) * document.body.offsetHeight/100,
                     behavior: "smooth",
                 });
             }
             else {
                 window.scroll({
-                    top: 3350,
-                });
-                window.scroll({
-                    top: document.body.parentNode.offsetHeight,
+                    top: (15+dist*20) * document.body.offsetHeight/100,
                     behavior: "smooth",
                 });
             }
-        };
+            
+        }
     </script>
 </body>
 </html>

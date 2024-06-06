@@ -11,6 +11,7 @@
 </head>
 <body>
     <main class="mainProjects">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h1 class="projectsT1 redText">My video game projects.</h1>
         <p id="videogameSubtitle" class="projectsTextMain whiteText boldText">
             A compilation of some video games that I have worked on during my education.
@@ -22,7 +23,8 @@
         </div>
     </main>
 
-    <div class="firstProjectsContainer">
+    <div class="firstProjectsContainer videoContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">Gods vs Demons.</h2>
         <iframe class="video" src="https://www.youtube.com/embed/Uz28Xf0Kzfw"></iframe>
         <p class="gameDescription whiteText boldText">
@@ -31,15 +33,17 @@
             The approach to the subject facilitated single-protagonist games, so carrying out this project was a challenge in which I had to investigate on my own.
         </p>
     </div>
-    <div class="projectsContainer">
+    <div class="projectsContainer videoContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">ToBee.</h2>
-        <iframe class="video" src="https://www.youtube.com/embed/yBewgNcYASI"></iframe>
         <p class="gameDescription whiteText boldText">
             ToBee was one of my first works from university where we were still experimenting with video game engines like Unity and its tools.
         </p>
+        <iframe class="video" src="https://www.youtube.com/embed/yBewgNcYASI"></iframe>
     </div>
 
-    <div class="projectsContainer">
+    <div class="projectsContainer videoContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText"><img class="award" src="imgs/awards/23_24.png" alt="Award_23_24">Castellnovo Chronicles.</h2>
         <iframe class="video" src="https://www.youtube.com/embed/SF_dnMGyc4k"></iframe>
         <p class="gameDescription whiteText boldText">
@@ -50,15 +54,17 @@
     </div>
 
     <div class="endContainer">
+        <div id="endDetector" class="endDetector"></div>
         <img class="arrowDown" src="imgs/arrowDown-01.png" alt="ArrowDown">
         <p class="textComingSoon whiteText boldText">
             More projects coming soon.
         </p>
-        <a class="returnButton whiteText boldText" href="index.html">
+        <a id="returnText" class="returnButton whiteText boldText" href="index.html">
             Return.
         </a>
     </div>
 
+    <script type="text/javascript" src="js/projects.js"></script>
     <script>
         window.onload = UpdateContent();
         function UpdateContent() {

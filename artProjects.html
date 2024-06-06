@@ -11,6 +11,7 @@
 </head>
 <body>
     <main class="mainProjects">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h1 class="projectsT1 redText">My art projects.</h1>
         <p id="artSubtitle" class="projectsTextMain whiteText boldText">
             A compilation of some work I have done during my university education.
@@ -22,6 +23,7 @@
         </div>
     </main>
     <div class="firstProjectsContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">2D art works.</h2>
         <div id="imgContainer">
             <img id="imgMonster1" class="imgMonster" src="imgs/art/monster/efectos.png" alt="">
@@ -30,7 +32,7 @@
             <img id="imgMonster4" class="imgMonster" src="imgs/art/monster/Color Objeto.png" alt="">
             <img id="imgMonster5" class="imgMonster" src="imgs/art/monster/capa2.png" alt="">
             
-            <div class="dotsContainer" style="display: none;">
+            <div class="dotsContainer projectsDots">
                 <button id="dotButton1" class="dotButton disabled" onclick="DisplayMonster(1)" disabled></button>
                 <button id="dotButton2" class="dotButton" onclick="DisplayMonster(2)" enabled></button>
                 <button id="dotButton3" class="dotButton" onclick="DisplayMonster(3)" enabled></button>
@@ -40,6 +42,7 @@
         </div>
     </div>
     <div class="projectsContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">Traditional 2D animation works.</h2>
         <div class="noRigContainer">
             <img id="traditionalGif" src="imgs/art/axolotl/noRig/Animacion.gif" alt="">
@@ -47,13 +50,14 @@
         </div>
     </div>
     <div class="projectsContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">Rigged 2D animation works.</h2>
-        <div class="noRigContainer">
+        <div class="rigContainer">
             <img id="rigGif1" class="rigGif" src="imgs/art/axolotl/Rig/walking.gif" alt="">
             <img id="rigGif2" class="rigGif" src="imgs/art/axolotl/Rig/stand.gif" alt="">
             <img id="rigGif3" class="rigGif" src="imgs/art/axolotl/Rig/attack.gif" alt="">
 
-            <div class="dotsContainer" style="display: none;">
+            <div class="dotsContainer projectsDots">
                 <button id="dotButtonGif1" class="dotButtonGif disabled" onclick="DisplayGif(1)" disabled></button>
                 <button id="dotButtonGif2" class="dotButtonGif" onclick="DisplayGif(2)" enabled></button>
                 <button id="dotButtonGif3" class="dotButtonGif" onclick="DisplayGif(3)" enabled></button>
@@ -61,6 +65,7 @@
         </div>
     </div>
     <div class="projectsContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">Geometric 3D modeling works.</h2>
         <div class="img3DContainer">
             <img id="geometricImg1" class="geometricImg HD3DImages" src="imgs/art/pokedex/frontal.jpg" alt="">
@@ -69,7 +74,7 @@
             <img id="geometricImg4" class="geometricImg HD3DImages" src="imgs/art/pokedex/frontal_no_relalista.jpg" alt="">
             <img id="geometricImg5" class="geometricImg HD3DImages" src="imgs/art/pokedex/trasera_superior.jpg" alt="">
 
-            <div class="dotsContainer" style="display: none;">
+            <div class="dotsContainer projectsDots">
                 <button id="dotButtonGeo1" class="dotButtonGeo disabled" onclick="DisplayGeometric(1)" disabled></button>
                 <button id="dotButtonGeo2" class="dotButtonGeo" onclick="DisplayGeometric(2)" enabled></button>
                 <button id="dotButtonGeo3" class="dotButtonGeo" onclick="DisplayGeometric(3)" enabled></button>
@@ -80,6 +85,7 @@
     </div>
 
     <div class="projectsContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">Organic 3D modeling works.</h2>
         <div class="img3DContainer">
             <img id="organicImg1" class="organicImg HD3DImages" src="imgs/art/sylveon/frontal_izquierdo.jpg" alt="">
@@ -88,7 +94,7 @@
             <img id="organicImg4" class="organicImg HD3DImages" src="imgs/art/sylveon/trasera_batalla.jpg" alt="">
             <img id="organicImg5" class="organicImg HD3DImages" src="imgs/art/sylveon/trasera_no_realista.jpg" alt="">
 
-            <div class="dotsContainer" style="display: none;">
+            <div class="dotsContainer projectsDots">
                 <button id="dotButtonOrg1" class="dotButtonOrg disabled" onclick="DisplayOrganic(1)" disabled></button>
                 <button id="dotButtonOrg2" class="dotButtonOrg" onclick="DisplayOrganic(2)" enabled></button>
                 <button id="dotButtonOrg3" class="dotButtonOrg" onclick="DisplayOrganic(3)" enabled></button>
@@ -99,6 +105,7 @@
     </div>
 
     <div class="projectsContainer">
+        <div id="sectionDetector" class="sectionDetector"></div>
         <h2 class="projectsT2 whiteText boldText">Own works.</h2>
         <div id="ownWorksContainer">
             <img id="littleCarImg1" class="ownWorksImgs HD3DImages" src="imgs/art/littleCar/littleCar.gif" alt="">
@@ -107,7 +114,7 @@
             <img id="littleCarImg4" class="ownWorksImgs HD3DImages littleCars" src="imgs/art/littleCar/van.png" alt="">
             <img id="littleCarImg5" class="ownWorksImgs HD3DImages littleCars" src="imgs/art/littleCar/car.png" alt="">
 
-            <div class="dotsContainer" style="display: none;">
+            <div class="dotsContainer projectsDots">
                 <button id="dotButtonCar1" class="dotButtonCar disabled" onclick="DisplayCar(1)" disabled></button>
                 <button id="dotButtonCar2" class="dotButtonCar" onclick="DisplayCar(2)" enabled></button>
                 <button id="dotButtonCar3" class="dotButtonCar" onclick="DisplayCar(3)" enabled></button>
@@ -117,21 +124,22 @@
         </div>
     </div>
     <div class="endContainer">
+        <div id="endDetector" class="endDetector"></div>
         <img class="arrowDown" src="imgs/arrowDown-01.png" alt="ArrowDown">
         <p class="textComingSoon whiteText boldText">
             More projects coming soon.
         </p>
-        <a class="returnButton whiteText boldText" href="index.html">
+        <a id="returnText" class="returnButton whiteText boldText" href="index.html">
             Return.
         </a>
     </div>
 
+    <script type="text/javascript" src="js/projects.js"></script>
     <script>
         window.onload = UpdateContent();
         function UpdateContent() {
             if (window.screen.width/window.screen.height <= 4/3) {
                 document.getElementById("artSubtitle").innerText = "Some works I have done during my education.";
-                Array.from(document.getElementsByClassName("dotsContainer")).forEach((item, index) => item.style.display = "flex");
             }
         }
 
