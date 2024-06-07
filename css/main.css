@@ -1593,7 +1593,7 @@ body {
 
     .detector {
         z-index: 999;
-        background-color: aqua;
+        background-color: rgb(255, 0, 0);
         position: absolute;
         bottom: 0;
         width: 100%;
