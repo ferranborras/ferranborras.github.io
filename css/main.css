@@ -283,7 +283,6 @@ body {
 
     .detector {
         z-index: 999;
-        background-color: aqua;
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -342,7 +341,6 @@ body {
 
     .sectionDetector {
         z-index: 999;
-        background-color: chartreuse;
         position: absolute;
         width: 100%;
         height: 10px;
@@ -1290,7 +1288,7 @@ body {
         opacity: 1;
         background-color: rgb(27, 27, 27);
         animation: hideLogoBackground linear 2.5s forwards;
-        z-index: 100;
+        z-index: 900;
         display: flex;
         align-items: center;
         justify-content: center;
@@ -1312,7 +1310,8 @@ body {
     }
     @keyframes hideLogoBackground {
         0%, 90% {
-            opacity: 0;
+            opacity: 1;
+            display: flex;
         }
         100% {
             opacity: 0;
@@ -1579,6 +1578,7 @@ body {
         margin: 0;
         padding: 0;
         top: -20vh;
+        opacity: 1;
     }
     .mainCovers {
         background-color: #1b1b1b;
@@ -1593,7 +1593,6 @@ body {
 
     .detector {
         z-index: 999;
-        background-color: rgb(255, 0, 0);
         position: absolute;
         bottom: 0;
         width: 100%;
@@ -1652,7 +1651,6 @@ body {
 
     .sectionDetector {
         z-index: 999;
-        background-color: chartreuse;
         position: absolute;
         width: 100%;
         height: 10px;
@@ -2452,6 +2450,7 @@ body {
         background-color: #dcdcdc;
         opacity: 0.25;
         transition: opacity 0.2s;
+        z-index: 1001;
     }
     .dotButton:first-child, .dotButtonGif:first-child {
         margin-left: 0;
