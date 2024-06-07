@@ -1782,6 +1782,7 @@ body {
         opacity: 1;
         transition: opacity .3s;
         transition-timing-function: ease-in-out;
+        z-index: 1000;
     }
     #projectsTitle {
         width: 80%;
