@@ -1289,7 +1289,7 @@ body {
         background-color: rgb(27, 27, 27);
         animation: hideLogoBackground linear 2.5s forwards;
         z-index: 900;
-        display: flex;
+        display: none;
         align-items: center;
         justify-content: center;
     }
@@ -1782,7 +1782,6 @@ body {
         opacity: 1;
         transition: opacity .3s;
         transition-timing-function: ease-in-out;
-        z-index: 1000;
     }
     #projectsTitle {
         width: 80%;
