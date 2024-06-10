@@ -22,7 +22,6 @@ body {
         height: 0;
         opacity: 1;
         background-color: rgb(27, 27, 27);
-        background-color: rgb(252, 0, 0);
         animation: hideLogoBackground linear 2.5s;
         z-index: 100;
         display: flex;
@@ -52,7 +51,7 @@ body {
         }
         100% {
             height: 100vh;
-            opacity: 1;
+            opacity: 0;
             display: none;
         }
     }
@@ -112,7 +111,7 @@ body {
     p {
         font-family: Roboto, 'Gill Sans';
         margin: 0;
-        font-size: 1.05vw;
+        font-size: max(1.05vw, 6pt);
         width: max-content;
         height: max-content;
     }
@@ -870,11 +869,12 @@ body {
     .mainProjects {
         position: relative;
         width: 75vw;
-        height: 100vh;
+        height: 90vh;
         display: flex;
         flex-wrap: wrap;
-        align-items: center;
+        align-items: end;
         margin: 0 auto;
+        padding-bottom: 10vh;
         opacity: 1;
         scale: 1;
         transition: opacity .3s;
@@ -883,13 +883,13 @@ body {
 
     .projectsT1 {
         width: 100%;
-        margin: 100px auto 0;
+        margin: 0 auto -10%;
         display: flex;
         justify-content: center;
     }
     .projectsTextMain {
         width: 100%;
-        margin: -300px auto -175px;
+        margin: 0 auto 0;
         opacity: 0.6;
         text-align: center;
     }
@@ -980,7 +980,7 @@ body {
         font-size: medium;
         width: max-content;
         height: max-content;
-        margin: -75px auto 0;
+        margin: -7% auto 0;
         display: flex;
         transition: opacity 0.2s;
     }
@@ -1003,17 +1003,21 @@ body {
         transition-timing-function: ease-in-out;
     }
 
+    #webGameContainer {
+        margin-top: 5%;
+    }
+
     #veggieContainer {
         width: max(320px, 100%);
-        height: 400px;
+        height: 50%;
         scale: 1;
         position: relative;
-        margin: 20px auto 0;
+        margin: 10% auto 0;
     }
     #veggieFrame {
         position: absolute;
         scale: .55;
-        height: 720px;
+        height: 193%;
         aspect-ratio: 7/5;
         margin: 0;
         padding: 0;
@@ -1021,6 +1025,7 @@ body {
         left: 50%;
         translate: -50% -50%;
         border: none;
+        opacity: .5;
     }
     
     .endContainer {
@@ -1033,7 +1038,7 @@ body {
         contain: paint;
     }
     .arrowDown {
-        height: 250px;
+        height: 22.5%;
         aspect-ratio: 1;
         display: flex;
         margin-top: -400px;
@@ -1042,10 +1047,11 @@ body {
     }
     .textComingSoon {
         width: 100%;
-        margin-top: 550px;
+        margin-top: 35.5%;
         opacity: 1;
         display: flex;
         justify-content: center;
+        font-size: smaller;
     }
     #endDetector {
         position: absolute;
@@ -1060,9 +1066,9 @@ body {
         opacity: 0.5;
         font-size: 1.05vw;
         font-size: medium;
-        margin-top: -600px;
+        margin-top: -600%;
         position: sticky;
-        top: 500px;
+        top: 67%;
         width: max-content;
         height: max-content;
         transition: opacity 0.2s;
@@ -1075,9 +1081,9 @@ body {
     
     #imgContainer {
         display: grid;
-        margin: -50px auto 0;
+        margin: 0 auto;
         width: 80%;
-        height: 400px;
+        height: 55%;
         gap: 1.5vw;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
@@ -1111,11 +1117,11 @@ body {
     }
     
     .noRigContainer {
-        height: 400px;
+        height: 55%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-between;
-        margin: -100px auto 0;
+        margin: 0 auto;
         align-items: center;
     }
     #traditionalGif {
@@ -1128,11 +1134,11 @@ body {
     }
     
     .rigContainer {
-        height: 400px;
+        height: 55%;
         display: flex;
         flex-wrap: wrap;
         justify-content: space-evenly;
-        margin: -50px auto 0;
+        margin: 0 auto;
         align-items: center;
     }
     .rigGif {
@@ -1144,12 +1150,12 @@ body {
 
     .img3DContainer {
         width: 100%;
-        height: 200px;
+        height: 25.5%;
         display: grid;
         gap: 1.5vw;
         grid-template-columns: repeat(4, 1fr);
         align-items: center;
-        margin: -200px auto 0;
+        margin: -10% auto 0;
     }
     
     .HD3DImages {
@@ -1203,11 +1209,11 @@ body {
     
     #ownWorksContainer {
         width: 100%;
-        height: 200px;
+        height: 25.5%;
         display: grid;
         gap: 1.5vw;
         grid-template-columns: repeat(4, 1fr);
-        margin: -200px auto 0;
+        margin: -10% auto 0;
         align-items: center;
     }
     .ownWorksImgs {
@@ -1257,7 +1263,7 @@ body {
         margin: 0 auto;
         width: 30%;
         height: max-content;
-        font-size: medium;
+        font-size: smaller;
         line-height: 1.5;
     }
 
@@ -1277,7 +1283,6 @@ body {
         width: 100vw;
         opacity: 1;
         background-color: rgb(27, 27, 27);
-        background-color: rgb(252, 0, 0);
         z-index: 900;
         animation: hideLogoBackground linear 2.5s;
         display: flex;
@@ -1307,7 +1312,7 @@ body {
         }
         100% {
             height: 100vh;
-            opacity: 1;
+            opacity: 0;
             display: none;
         }
     }
@@ -1510,7 +1515,7 @@ body {
         background-image: url("../imgs/home.png");
         background-position: 50% 50%;
         background-repeat: no-repeat;
-        margin: 45px auto;
+        margin: 45% auto;
         z-index: 91;
     }
     #scrollTop:hover {
@@ -1537,7 +1542,7 @@ body {
         text-align: center;
         scale: 1;
         opacity: .5;
-        margin: 45px auto;
+        margin: 45% auto;
         z-index: 91;
         transition: all .15s;
     }
@@ -2088,13 +2093,13 @@ body {
     .projectsT1 {
         width: 80%;
         height: max-content;
-        margin: 0 auto -200px;
+        margin: 0 auto -75%;
         font-size: xx-large;
         text-align: center;
     }
     .projectsTextMain {
         width: 80%;
-        margin: -200px auto 0;
+        margin: -75% auto 0;
         opacity: 0.6;
         font-size: medium;
         text-align: center;
@@ -2256,7 +2261,7 @@ body {
     }
     .textComingSoon {
         width: 100%;
-        margin-top: 500px;
+        margin-top: 150%;
         opacity: 1;
         display: flex;
         justify-content: center;
