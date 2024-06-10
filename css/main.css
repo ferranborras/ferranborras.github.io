@@ -1517,6 +1517,8 @@ body {
         background-repeat: no-repeat;
         margin: 45% auto;
         z-index: 91;
+        opacity: .2;
+        border: .5px solid yellow;
     }
     #scrollTop:hover {
         cursor: pointer;
