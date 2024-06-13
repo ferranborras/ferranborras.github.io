@@ -170,7 +170,7 @@ function DoReachOutAnimations(onScreen) {
 }
 
 function HoverWheel() {
-    if (!wheelSpinning) {
+    if (!wheelSpinning && window.screen.width/window.screen.height > 4/3) {
         let profilePic = document.getElementById("aboutMePPic");
         profilePic.children[0].style.opacity = 0;
         profilePic.style.width = "5%";
@@ -180,7 +180,7 @@ function HoverWheel() {
 }
 
 function UnhoverWheel() {
-    if (!wheelSpinning) {
+    if (!wheelSpinning && window.screen.width/window.screen.height > 4/3) {
         let profilePic = document.getElementById("aboutMePPic");
         profilePic.children[0].style.opacity = 1;
         profilePic.style.width = "100%";
@@ -190,7 +190,7 @@ function UnhoverWheel() {
 }
 
 function SpinWheel() {
-    if (!wheelSpinning) {
+    if (!wheelSpinning && window.screen.width/window.screen.height > 4/3) {
         wheelSpinning = true;
         let wheel = document.getElementById("wheel");
         let profilePic = document.getElementById("aboutMePPic");
