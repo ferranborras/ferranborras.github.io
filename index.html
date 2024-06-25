@@ -207,7 +207,11 @@
         window.onload = UpdateContent();
         function UpdateContent() {
             if (window.screen.width/window.screen.height <= 4/3) {
+                console.log("Small");
                 Array.from(document.getElementsByClassName("dotsContainer")).forEach((item, index) => item.style.display = "flex");
+            }
+            else {
+                console.log("Big");
             }
         }
 
