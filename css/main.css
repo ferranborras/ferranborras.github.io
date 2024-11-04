@@ -1051,7 +1051,7 @@ body {
         opacity: 1;
         display: flex;
         justify-content: center;
-        font-size: smaller;
+        font-size: small;
     }
     #endDetector {
         position: absolute;
@@ -2093,13 +2093,13 @@ body {
     .projectsT1 {
         width: 80%;
         height: max-content;
-        margin: 0 auto -75%;
+        margin: 0 auto -200px;
         font-size: xx-large;
         text-align: center;
     }
     .projectsTextMain {
         width: 80%;
-        margin: -75% auto 0;
+        margin: -200px auto 0;
         opacity: 0.6;
         font-size: medium;
         text-align: center;
@@ -2261,7 +2261,7 @@ body {
     }
     .textComingSoon {
         width: 100%;
-        margin-top: 150%;
+        margin-top: 500px;
         opacity: 1;
         display: flex;
         justify-content: center;
