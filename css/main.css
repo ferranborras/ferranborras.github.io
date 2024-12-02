@@ -177,7 +177,7 @@ canvas {
     width: auto;
     text-align: justify;
     font-family: "Arimo", sans-serif;
-    font-weight: normal;
+    font-weight: bold;
     font-size: max(2.5vw, 20px);
     font-optical-sizing: auto;
 }
