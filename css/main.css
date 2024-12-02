@@ -1,0 +1,327 @@
+:root {
+    --bgColor: #05060d;
+    --white: #ffffff;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+.arimo-Arimo {
+    font-family: "Arimo", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400; /*400 to 700*/
+    font-style: normal;
+}
+
+.heebo-Heebo {
+  font-family: "Heebo", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 100; /*100 to 900*/
+  font-style: normal;
+}
+
+body {
+    background-color: var(--bgColor);
+    margin: 0;
+    font-family: "Heebo", sans-serif;
+}
+
+canvas {
+    display: block;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    z-index: -1;
+    pointer-events: none;
+}
+
+.section {
+    padding: min(100px, 10%);
+    margin-bottom: max(200px, 15%);
+}
+.sectionSize {
+    width: auto;
+    height: max-content;
+}
+
+.flexbox {
+    display: flex;
+    flex-direction: column;
+}
+
+.order {
+    order: var(--order);
+}
+
+.flexrow {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+@media (max-width: 650px) {
+    .flexrow {
+        display: flex;
+        flex-direction: column;
+    }
+}
+
+.grid {
+    display: grid;
+    aspect-ratio: 5/2;
+    width: auto;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    gap: max(30px, 1.5vw);
+    margin: 8%;
+    margin-bottom: max(200px, 15%);
+}
+
+#mainIndex {
+    width: auto;
+    height: 100vh;
+    padding: min(100px, 5%);
+    padding-top: min(50px, 10%);
+    background-image: url("../imgs/presentation.png");
+    background-position: 60% 95%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin-bottom: max(150px, 15%);
+    transition: opacity 0.3s ease;
+}
+
+#homeTitle {
+    margin-top: min(100px, 10%);
+}
+
+.sectionTitle {
+    color: var(--white);
+    width: auto;
+    font-family: "Arimo", sans-serif;
+    font-size: max(5vw, 34pt);
+    margin-top: 0;
+    margin-bottom: 2%;
+    font-optical-sizing: auto;
+}
+
+#homeSubtitle {
+    color: var(--white);
+    width: auto;
+    text-align: center;
+    font-family: "Arimo", sans-serif;
+    font-size: max(2vw, 12pt);
+    font-weight: 700;
+    font-optical-sizing: auto;
+}
+
+#homeText {
+    width: max(43.9%, 288px);
+}
+
+.button {
+    text-decoration: none;
+    color: black;
+    border: none;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: min(300px, 60%);
+    aspect-ratio: 6;
+    font-family: "Heebo", sans-serif;
+    background-color: var(--white);
+    color: var(--bgColor);
+    font-optical-sizing: auto;
+    font-size: max(1.1vw, 7pt);
+    font-weight: 900;
+    letter-spacing: 0.1vw;
+    margin-top: 5%;
+}
+
+.button:hover {
+    text-decoration: none;
+    color: black;
+    cursor: pointer;
+    opacity: .5;
+}
+
+.button:visited {
+    text-decoration: none;
+    color: black;
+}
+
+#sectionSubtitle {
+    width: auto;
+    color: var(--white);
+    font-family: "Arimo", sans-serif;
+    font-size: max(2vw, 12pt);
+    font-weight: 700;
+    font-optical-sizing: auto;
+}
+
+.halfSection {
+    width: max(var(--width), 254px);
+    height: max-content;
+    margin: 0;
+}
+
+.skillBlock {
+    width: 50%;
+    height: max-content;
+}
+
+.sectionH3 {
+    color: var(--white);
+    width: auto;
+    text-align: justify;
+    font-family: "Arimo", sans-serif;
+    font-weight: normal;
+    font-size: max(2.5vw, 20px);
+    font-optical-sizing: auto;
+}
+
+.sectionText {
+    color: var(--white);
+    width: auto;
+    font-size: max(1.4vw, 12px);
+    font-optical-sizing: auto;
+}
+
+.justyText {
+    text-align: justify;
+}
+
+.firstSectionText {
+    margin-top: 8vw;
+}
+
+@media (max-width: 650px) {
+    .firstSectionText {
+        margin-top: 0;
+    }
+
+    .skillBlock {
+        width: 100%;
+        height: max-content;
+    }
+}
+
+.gridItem {
+    grid-column: var(--col);
+    grid-row: var(--row);
+    width: 100%;
+    height: 100%;
+}
+
+.video {
+    border: none;
+}
+
+@media (max-width: 650px) {
+    .grid {
+        display: block;
+        margin: min(100px, 5%);
+        margin-bottom: max(200px, 15%);
+    }
+
+    .video {
+        width: 100%;
+        height: auto;
+        margin-bottom: min(50px, 2.5%);
+    }
+}
+
+#lastSection {
+    align-items: center;
+    width: auto;
+    height: 90vh;
+    padding: min(100px, 5%);
+    padding-top: min(50px, 10%);
+    background-image: url("../imgs/background.png");
+    background-position: 0% 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+    margin: 0;
+    transition: opacity 0.3s ease;
+}
+
+#reachTitle {
+    width: auto;
+    font-family: "Arimo", sans-serif;
+    font-size: max(2vw, 12pt);
+    text-align: center;
+    margin-top: 100px;
+    margin-bottom: max(50px, 13vw);
+    font-optical-sizing: auto;
+}
+
+#reachContainer {
+    display: flex;
+    flex-wrap: wrap;
+    width: max(80%, 200px);
+    height: auto;
+}
+
+#contactContainer {
+    background-color: var(--white);
+    height: 100%;
+}
+
+#CVContainer {
+    background-color: var(--bgColor);
+    height: 100%;
+}
+
+.reachHalfContainer {
+    padding: 0px;
+    width: max(var(--width), 100px);
+}
+
+.reachH3 {
+    width: auto;
+    font-family: "Arimo", sans-serif;
+    font-weight: normal;
+    font-optical-sizing: auto;
+    margin: max(20px, 5%);
+    font-size: max(4vw, 30px);
+    padding: 0;
+}
+
+.reachText {
+    margin: max(20px, 5%);
+    margin-top: 0;
+    font-family: "Arimo", sans-serif;
+    font-weight: bold;
+    font-size: max(1.2vw, 12px);
+    font-optical-sizing: auto;
+}
+
+#CVText {
+    font-size: max(1.8vw, 12px);
+}
+
+.contactLink {
+    text-decoration: none;
+    color: var(--linkColor);
+}
+
+.contactLink:visited {
+    color: var(--lickColor);
+}
+
+.contactLink:hover {
+    color: var(--linkColor);
+    opacity: .5;
+}
+
+@media (max-width: 650px) {
+    .reachHalfContainer {
+        width: 100%;
+    }
+
+    #reachContainer {
+        height: max(15vw, 130px);
+    }
+}

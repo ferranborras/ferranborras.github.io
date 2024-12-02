@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ferran Borrás | Portfolio</title>
+    <link rel="icon" href="imgs/favicon.png" type="image/x-icon"/>
+
+    <link rel="stylesheet" href="css/main.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400..700;1,400..700&family=Heebo:wght@100..900&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+    <canvas id="backgroundCanvas"></canvas>
+    <main id="mainIndex" class="flexbox">
+        <h1 id="homeTitle" class="sectionTitle order" style="--order: 2;">
+            Game Developer
+        </h1>
+        <p id="homeSubtitle" class="order" style="--order: 1;">
+            FERRAN BORRÁS
+        </p>
+        <p id="homeText" class="sectionText justyText order" style="--order: 3;">
+            I love challenges, designing solutions to problems, creating new tools that will help others enrich their daily lives.
+        </p>
+        <a class="button Heboo order" style="--order: 4;" href="#lastSection">REACH OUT</a>
+    </main>
+    <div class="section sectionSize flexrow">
+        <div class="halfSection flexbox" style="--width: 50%;">
+            <h2 class="sectionTitle order" style="--order: 2;">
+                About me.
+            </h2>
+            <p id="sectionSubtitle" class="order" style="--order: 1;">
+                HI, I'M FERRAN.
+            </p>
+        </div>
+        <div class="halfSection" style="--width: 50%;">
+            <p class="firstSectionText sectionText justyText">
+                I am a 4th year student in the Degree in Video Game Design and Development at the Jaume I University (UJI), Castellon, Spain.
+            </p>
+            <p class="sectionText justyText">
+                During my studies I have had the opportunity to work in teams, master multiple disciplines and develop new skills.
+            </p>
+            <a class="button Heboo" href="#workSection">CHECK OUT MY WORK</a>
+        </div>
+    </div>
+    <div id="workSection" class="grid">
+        <iframe class="video gridItem" style="--col: 1/2; --row: 1/3;" src="https://www.youtube.com/embed/z6zHSKmxaIQ"></iframe>
+        <iframe class="video gridItem" style="--col: 2/3; --row: 1/2;" src="https://www.youtube.com/embed/styugbs2ZXo"></iframe>
+        <iframe class="video gridItem" style="--col: 2/3; --row: 2/3;" src="https://www.youtube.com/embed/nriHZH6ddtQ"></iframe>
+    </div>
+    <div class="section sectionSize flexrow">
+        <div class="halfSection" style="--width: 40%;">
+            <h2 class="sectionTitle order" style="--order: 2;">
+                My skills.
+            </h2>
+        </div>
+        <div class="halfSection flexrow" style="--width: 60%;">
+            <div class="skillBlock">
+                <h3 class="sectionH3">
+                    Languages
+                </h3>
+                <p class="sectionText">
+                    B2 level English.<br>
+                    Native Spanish.<br>
+                    C1 level Valencian.
+                </p>
+            </div>
+            <div class="skillBlock">
+                <h3 class="sectionH3">
+                    Programming
+                </h3>
+                <p class="sectionText">
+                    C# and C++.<br>
+                    Html, CSS and JavaScript.<br>
+                    Python.<br>
+                    MySQL.
+                </p>
+            </div>
+            <div class="skillBlock">
+                <h3 class="sectionH3">
+                    Competencies
+                </h3>
+                <p class="sectionText">
+                    Data structure and algorithms.<br>
+                    2D and 3D design.<br>
+                    Unity.<br>
+                    Teamwork.
+                </p>
+            </div>
+        </div>
+    </div>
+    <footer id="lastSection" class="flexbox">
+        <h2 id="reachTitle" class="sectionTitle">
+            REACH OUT
+        </h2>
+        <div id="reachContainer">
+            <div id="contactContainer" class="reachHalfContainer" style="--width: 60%">
+                <h3 class="reachH3" style="color: black;">
+                    CONTACT
+                </h3>
+                <p class="sectionText reachText" style="color: black;">
+                    <a class="contactLink" style="--linkColor: black;" href="mailto:ferranborrasb@gmail.com?" taget="blank_">
+                        ferranborrasb@gmail.com
+                    </a><br>
+                    <a class="contactLink" style="--linkColor: black;" href="https://wa.me/634677913" target="blank_">
+                        +34 634 67 79 13
+                    </a>
+                </p>
+            </div>
+            <div id="CVContainer" class="reachHalfContainer" style="--width: 40%">
+                <h3 class="reachH3" style="color: white;">
+                    CV
+                </h3>
+                <p id="CVText" class="sectionText reachText">
+                    <a class="contactLink" style="--linkColor: white;" href="files/CV_Ferran_Borras.pdf" download="CV_Ferran_Borras">
+                        DOWNLOAD
+                    </a>
+                </p>
+            </div>
+        </div>
+    </footer>
+
+    <script type="text/javascript" src="js/main.js"></script>
+</body>
+</html>
